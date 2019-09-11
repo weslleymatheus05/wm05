@@ -60,7 +60,7 @@ int main(){
    			 printf("\nAno bissexto\n");
   
  		}else {
-    		printf("\nAno nao bissexto\n");
+    			printf("\nAno nao bissexto\n");
   
  		 }
 		break;
@@ -69,10 +69,10 @@ int main(){
 			printf("\n\n Digite as notas aqui \n");
 			
 			printf("\nNota 1: ");
-    		scanf("%f", &n1);
+    			scanf("%f", &n1);
     
 			printf("\nNota 2: ");
-    		scanf("%f", &n2);
+    			scanf("%f", &n2);
     		
    			printf("\nNota 3: ");
    			scanf("%f", &n3);
@@ -80,14 +80,15 @@ int main(){
 			media = ((n1*1) + (n2*1) + (n3*2))/3;
 			
 		if (media >=60){
-        	printf("\nSua media foi: %.2f\n" , media);
-       		printf("\nParabens voce foi aprovado\n\n");
+        		printf("\nSua media foi: %.2f\n" , media);
+       			printf("\nParabens voce foi aprovado\n\n");
        		
-    	} else {
-        	printf("\nSua media foi: %.2f" , media);
-       		printf("\nInfelizmente voce foi reprovado, estude mais um pouco!\n\n");
-    }
-	
+    		} else {
+        	
+			printf("\nSua media foi: %.2f" , media);
+       			printf("\nInfelizmente voce foi reprovado, estude mais um pouco!\n\n");
+    		}
+		
 		break;
 		
 		case 6:
