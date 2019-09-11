@@ -9,22 +9,32 @@ int main(){
 	
 	int i = 0;
 	
-	
-	do {
-			printf(" Digite 1 para saber se um numero e par ou impar\n\n Digite 2 para saber a potencia de um numero\n\n Digite 3 para saber a raiz de um numero\n\n Digite 4 para saber se um ano e bissexto ou não bissexto\n\n Digite 5 para calcular medias\n\n Digite 6\n\n Digite 7\n\n Digite 8\n\n Digite 0 para sair\n\n Digite aqui: ");
+	do {	//MENU
+			printf("\n\nDigite 1 para saber se um numero e par ou impar\n\n"
+					"Digite 2 para saber a potencia de um numero\n\n"
+					"Digite 3 para saber a raiz de um numero\n\n"
+					"Digite 4 para saber se um ano e bissexto ou não bissexto\n\n"
+					"Digite 5 para calcular medias\n\n"
+					"Digite 6\n\n"
+					"Digite 7\n\n"
+					"Digite 8\n\n"
+					"Digite 9\n\n"
+					"Digite 10\n\n"
+					"Digite 0 para sair\n\n"
+					"Digite aqui: ");
 			scanf("%d", &i);
 	
 		switch(i){
 	
 			case 1:
 			int num1;
-				printf("\n\nDigite o numero aqui\n\n");
+				printf("\n\nDigite o numero aqui: ");
 				scanf("%d", &num1);
 			
 			if(num1 % 2 == 0){
-				printf("%d é par\n\n", num1);
+				printf("\n%d é par\n\n", num1);
 			}else{
-				printf("%d é impar\n\n", num1);
+				printf("\n%d é impar\n\n", num1);
 			}		
 			break;
 		
@@ -32,21 +42,31 @@ int main(){
 				float a,p;
 				int b;
 				
-				printf("\n\n Entre com o numero: ");
+				printf("\n\nEntre com o numero: ");
 				scanf("%f",&a);
 				
-				printf("\n\n Entre com outro numero: ");
+				printf("\nEntre com outro numero: ");
 				scanf("%d", &b);
 			
 				p=pow(a,b); 
 			
-				printf("\n\n O resultado fica %e\n\n",p);
+				printf("\nO resultado fica %e\n\n",p);
 			
 			break;
 		
 			case 3:
-				printf("Numero 3\n");
-		
+				float a1,p1;
+				int b1;
+				printf("\n\nEntre com um numero: ");
+				scanf("%f", &a1);
+				
+				printf("\nEntre com outro numero: ");
+				scanf("%d", &b1);
+				b1 = 1.0*b1;
+				p=pow(a,b1);
+				
+				printf("\nO resultado fica %e\n\n", p1);
+			
 			break;
 		
 			case 4:
@@ -56,10 +76,10 @@ int main(){
  			 	scanf("%d", &ano);
  			 
   			if (ano % 4 == 0) {
-   				printf("\n\nAno bissexto\n\n");
+   				printf("\nAno bissexto\n\n");
   
  			}else {
-    			printf("\n\nAno nao bissexto\n\n");
+    			printf("\nAno nao bissexto\n\n");
   
  			}
 			break;
@@ -67,7 +87,7 @@ int main(){
 			case 5:
 				float n1, n2, n3, media;
 			
-				printf("\n\n Digite as notas aqui \n");
+				printf("\n\nDigite as notas aqui \n");
 			
 				printf("\nNota 1: ");
     			scanf("%f", &n1);
@@ -93,8 +113,6 @@ int main(){
 			break;
 		
 			case 6:
-				printf("Numero 6\n");
-			
 				printf("Nota 1: ");
 				scanf("%f", &n1);
 			
@@ -104,23 +122,27 @@ int main(){
 				media = (n1*n2)/2;
 		
 			if(n1,n2>= 0,0 && n1,n2<=10.0){
-				printf("Sua media é: %.2f", media);
+				printf("\nSua media é: %.2f\n\n", media);
 		
 			}else{
-				printf("A nota nao possui um valor valido ");
+				printf("\nA nota nao possui um valor valido\n\n");
 			}
 			break;
 		
 			case 7:
-				printf("Numero 7\n");
+				
 			break;
 		
 			case 8:
-				printf("Numero 8\n");
+				
 			break;
 		
 			case 9:
-				printf("Numero 9\n");
+				
+			break;
+			
+			case 10:
+			
 			break;
 	}
 	
