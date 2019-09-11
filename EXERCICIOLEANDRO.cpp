@@ -1,48 +1,111 @@
 #include <stdio.h>
 #include <conio.h>
 #include <locale.h>
-
+#include <math.h> 
 
 int main(){
 	
 	setlocale(LC_ALL, "Portuguese");	
 	
 	int i = 0;
-
+	int a = 0.0;
+	int b,p;
+	float n1, n2, n3, media;
+	
 	do {
-		printf(" Digite 1 para saber se e par ou impar\n\n Digite 2\n\n Digite 3\n\n Digite 4\n\n Digite 5\n\n Digite 6\n\n Digite 7\n\n Digite 8\n\n Digite 0 para sair\n\n Digite aqui: ");
+		printf(" Digite 1 para saber se um numero e par ou impar\n\n Digite 2 para saber a potencia de um numero\n\n Digite 3 para saber a raiz de um numero\n\n Digite 4 para saber se um ano e bissexto ou não bissexto\n\n Digite 5 para calcular medias\n\n Digite 6\n\n Digite 7\n\n Digite 8\n\n Digite 0 para sair\n\n Digite aqui: ");
 		scanf("%d", &i);
 	
 	switch(i){
 	
 		case 1:
-			printf("\nDigite um numero para saber se e par ou impar: ");
-				scanf("%d", &i);
-			if(i % 2 == 0){
-				printf("\n%d � par\n\n\n\n", i);
+			
+			printf("\n\nDigite o numero aqui\n\n");
+			scanf("%d", &i);
+			
+		if(i % 2 == 0){
+			printf("%d é par\n\n", i);
 		}else{
-			printf("%d � impar\n\n", i );
+			printf("%d é impar\n\n", i );
 		}		
 		break;
 		
 		case 2:
-			printf("Numero 2\n");
+			printf("\n Digite 2\n");
+				
+			printf("\n\n Entre com o numero: ");
+			scanf("%f",&a);
+				
+			printf("\n\n Entre com outro numero: ");
+			scanf("%d", &b);
+			
+			p=pow(a,b); 
+			
+			printf("\n\n O resultado fica %e\n\n",p);
+			
 		break;
 		
 		case 3:
 			printf("Numero 3\n");
+		
 		break;
 		
 		case 4:
 			printf("Numero 4\n");
+  			
+			printf("\nDigite o ano: ");
+ 			 scanf("%d", &b);
+ 			 
+  		if (b % 4 == 0) {
+   			 printf("\nAno bissexto\n");
+  
+ 		}else {
+    		printf("\nAno nao bissexto\n");
+  
+ 		 }
 		break;
 		
 		case 5:
-			printf("Numero 5\n");
+			printf("\n\n Digite as notas aqui \n");
+			
+			printf("\nNota 1: ");
+    		scanf("%f", &n1);
+    
+			printf("\nNota 2: ");
+    		scanf("%f", &n2);
+    		
+   			printf("\nNota 3: ");
+   			scanf("%f", &n3);
+    
+			media = ((n1*1) + (n2*1) + (n3*2))/3;
+			
+		if (media >=60){
+        	printf("\nSua media foi: %.2f\n" , media);
+       		printf("\nParabens voce foi aprovado\n\n");
+       		
+    	} else {
+        	printf("\nSua media foi: %.2f" , media);
+       		printf("\nInfelizmente voce foi reprovado, estude mais um pouco!\n\n");
+    }
+	
 		break;
 		
 		case 6:
 			printf("Numero 6\n");
+			
+			printf("Nota 1: ");
+			scanf("%f", &n1);
+			
+			printf("Nota 2: ");
+			scanf("%f", &n2);
+			
+			media = (n1*n2)/2;
+		
+		if(n1,n2>= 0,0 && n1,n2<=10.0){
+			printf("Sua media é: %.2f", media);
+		}else{
+			printf("A nota nao possui um valor valido ");
+			}
 		break;
 		
 		case 7:
@@ -58,7 +121,7 @@ int main(){
 		break;
 	}
 	
-	}while (i != 0);
+	}while (i != 0 && i<=9);
 	
 	getch();
 	
