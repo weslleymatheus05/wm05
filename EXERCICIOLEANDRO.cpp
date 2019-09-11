@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <locale.h>
 #include <math.h> 
-
+#include <string.h>
 int main(){
 	
 	setlocale(LC_ALL, "Portuguese");	
@@ -142,7 +142,16 @@ int main(){
 			break;
 			
 			case 10:
+			char nome[61];
+			int mtc;
 			
+			printf("Digite seu nome: ");
+			scanf("%s", &nome);
+			
+			printf("Digite aqui sua matricula: ");
+			scanf("%d", &mtc);
+			
+			printf("Ola %s sua matricula em Hexadecimal é: %2X", nome, mtc);
 			break;
 	}
 	
