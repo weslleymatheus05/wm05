@@ -8,9 +8,7 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");	
 	
 	int i = 0;
-	int a = 0.0;
-	int b,p;
-	float n1, n2, n3, media;
+	
 	
 	do {
 		printf(" Digite 1 para saber se um numero e par ou impar\n\n Digite 2 para saber a potencia de um numero\n\n Digite 3 para saber a raiz de um numero\n\n Digite 4 para saber se um ano e bissexto ou não bissexto\n\n Digite 5 para calcular medias\n\n Digite 6\n\n Digite 7\n\n Digite 8\n\n Digite 0 para sair\n\n Digite aqui: ");
@@ -31,6 +29,10 @@ int main(){
 		break;
 		
 		case 2:
+			float a,p;
+			int b;
+			
+			
 			printf("\n Digite 2\n");
 				
 			printf("\n\n Entre com o numero: ");
@@ -66,6 +68,8 @@ int main(){
 		break;
 		
 		case 5:
+			float n1, n2, n3, media;
+			
 			printf("\n\n Digite as notas aqui \n");
 			
 			printf("\nNota 1: ");
@@ -104,6 +108,7 @@ int main(){
 		
 		if(n1,n2>= 0,0 && n1,n2<=10.0){
 			printf("Sua media é: %.2f", media);
+		
 		}else{
 			printf("A nota nao possui um valor valido ");
 			}
