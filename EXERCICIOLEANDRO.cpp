@@ -10,7 +10,7 @@ int main(){
 	int i = 0;
 	
 	       do {	//Opções do menu
-			printf("\n\nDigite 1 para saber se um número e par ou ímpar\n\n"
+			printf("\n\nDigite --> 1 para saber se um número e par ou ímpar\n\n"
 			"Digite --> 2 para saber a potência de um numero\n\n"
 			"Digite --> 3 para saber a raiz de um número\n\n"
 			"Digite --> 4 para saber se um ano é bissexto ou não bissexto\n\n"
@@ -151,13 +151,13 @@ int main(){
 	char nome[61];
 	int mtc;
 		//entrada
-		printf("Digite seu nome: ");
+		printf("\nDigite seu nome: ");
 		scanf("%s", &nome);
 		//processamento
-		printf("Digite aqui sua matrícula: ");
+		printf("\nDigite aqui sua matrícula: ");
 		scanf("%d", &mtc);
 		//saída
-		printf("Ola %s sua matrícula em Hexadecimal é: %2X", nome, mtc);
+		printf("\nOla %s sua matrícula em Hexadecimal é: %2X\n\n", nome, mtc);
 		break;
 	}
 	
