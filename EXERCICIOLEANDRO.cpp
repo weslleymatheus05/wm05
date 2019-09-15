@@ -4,158 +4,164 @@
 #include <math.h> 
 #include <string.h>
 int main(){
-	
+	//Idioma do progama em português
 	setlocale(LC_ALL, "Portuguese");	
 	
 	int i = 0;
 	
-	do {	//MENU
-			printf("\n\nDigite 1 para saber se um numero e par ou impar\n\n"
-					"Digite 2 para saber a potencia de um numero\n\n"
-					"Digite 3 para saber a raiz de um numero\n\n"
-					"Digite 4 para saber se um ano e bissexto ou não bissexto\n\n"
-					"Digite 5 para calcular medias\n\n"
-					"Digite 6\n\n"
-					"Digite 7\n\n"
-					"Digite 8\n\n"
-					"Digite 9\n\n"
-					"Digite 10\n\n"
-					"Digite 0 para sair\n\n"
-					"Digite aqui: ");
+	       do {	//Opções do menu
+			printf("\n\nDigite 1 para saber se um número e par ou ímpar\n\n"
+			"Digite --> 2 para saber a potência de um numero\n\n"
+			"Digite --> 3 para saber a raiz de um número\n\n"
+			"Digite --> 4 para saber se um ano é bissexto ou não bissexto\n\n"
+			"Digite --> 5 para calcular médias ponderadas\n\n"
+			"Digite --> 6 médias de 2 números\n\n"
+			"Digite --> 7 número não disponível\n\n"
+			"Digite --> 8 número não disponível\n\n"
+			"Digite --> 9 número não disponível\n\n"
+			"Digite --> 10 matrícula em hexadecimal\n\n"
+			"Digite 0 para sair\n\n"
+			"Digite aqui: ");
 			scanf("%d", &i);
 	
 		switch(i){
 	
-			case 1:
-			int num1;
-				printf("\n\nDigite o numero aqui: ");
-				scanf("%d", &num1);
-			
-			if(num1 % 2 == 0){
-				printf("\n%d é par\n\n", num1);
-			}else{
-				printf("\n%d é impar\n\n", num1);
-			}		
+	case 1:
+		int num1;
+			//entrada
+			printf("\n\nDigite o número aqui: ");
+			scanf("%d", &num1);
+			//processamento
+		if	(num1 % 2 == 0){
+			printf("\n%d é par\n\n", num1);
+			//saída
+		}else{
+			printf("\n%d é ímpar\n\n", num1);
+		}		
 			break;
 		
-			case 2:
-				float a,p;
-				int b;
-				
-				printf("\n\nEntre com o numero: ");
-				scanf("%f",&a);
-				
-				printf("\nEntre com outro numero: ");
-				scanf("%d", &b);
-			
-				p=pow(a,b); 
-			
-				printf("\nO resultado fica %e\n\n",p);
-			
+	case 2:
+		float a,p;
+		int b;
+			//entrada
+			printf("\n\nEntre com o número: ");
+			scanf("%f",&a);	
+			printf("\nEntre com outro número: ");
+			scanf("%d", &b);
+			//processamento
+			p=pow(a,b); 
+			//saída
+			printf("\nO resultado fica %e\n\n",p);
 			break;
 		
-			case 3:
-				float a1,p1;
-				int b1;
-				printf("\n\nEntre com um numero: ");
-				scanf("%f", &a1);
-				
-				printf("\nEntre com outro numero: ");
-				scanf("%d", &b1);
-				b1 = 1.0*b1;
-				p=pow(a,b1);
-				
-				printf("\nO resultado fica %e\n\n", p1);
-			
+	case 3:
+		float a1,resultado1;
+		int b1;
+			//entrada
+			printf("\n\nEntre com um número flutuante: ");
+			scanf("%f", &a1);
+			printf("\nEntre com um outro número sendo inteiro: ");
+			scanf("%d", &b1);
+			//processamento
+			resultado1 = pow(a1, 1./b1);
+			//saída
+			printf("\nO resultado fica %e\n\n", resultado1);
 			break;
 		
-			case 4:
-				int ano;
-  			
-				printf("\n\nDigite o ano: ");
- 			 	scanf("%d", &ano);
- 			 
-  			if (ano % 4 == 0) {
-   				printf("\nAno bissexto\n\n");
+	case 4:
+		int ano;
+  			//entrada
+			printf("\n\nDigite o ano: ");
+ 			 scanf("%d", &ano);
+ 			 //processamento
+  		if (ano % 4 == 0) {
+  			//saída
+   			printf("\nAno bissexto\n\n");
   
- 			}else {
-    			printf("\nAno nao bissexto\n\n");
-  
+ 		}else {
+ 			//saída
+    			printf("\nAno não bissexto\n\n");
  			}
 			break;
 		
-			case 5:
-				float n1, n2, n3, media;
-			
-				printf("\n\nDigite as notas aqui \n");
-			
-				printf("\nNota 1: ");
+	case 5:
+		float n1, n2, n3, media;
+			//entrada
+			printf("\n\nDigite as notas aqui \n");
+			printf("\nNota 1: ");
     			scanf("%f", &n1);
-    
-				printf("\nNota 2: ");
+			
+			printf("\nNota 2: ");
     			scanf("%f", &n2);
     		
-   				printf("\nNota 3: ");
-   				scanf("%f", &n3);
-    
-				media = ((n1*1) + (n2*1) + (n3*2))/3;
+   			printf("\nNota 3: ");
+   			scanf("%f", &n3);
+    			//processamento
 			
+			media = ((n1*1) + (n2*1) + (n3*2))/3;
 			if (media >=60){
-        		printf("\nSua media foi: %.2f\n" , media);
-       			printf("\nParabens voce foi aprovado\n\n");
+			
+			//saída1	
+        		printf("\nSua média foi: %.2f\n" , media);
+       			printf("\nParabêns você foi aprovado\n\n");
        		
     		} else {
-        	
-				printf("\nSua media foi: %.2f" , media);
-       			printf("\nInfelizmente voce foi reprovado, estude mais um pouco!\n\n");
+        		//saída
+			printf("\nSua media foi: %.2f" , media);
+       			printf("\nInfelizmente você foi reprovado, estude mais um pouco!\n\n");
     		}
-		
 			break;
 		
-			case 6:
-				printf("Nota 1: ");
-				scanf("%f", &n1);
+	case 6:
+		 //entrada
+		 printf("Nota 1: ");
+	         scanf("%f", &n1);
 			
-				printf("Nota 2: ");
-				scanf("%f", &n2);
-			
-				media = (n1*n2)/2;
-		
-			if(n1,n2>= 0,0 && n1,n2<=10.0){
-				printf("\nSua media é: %.2f\n\n", media);
-		
-			}else{
-				printf("\nA nota nao possui um valor valido\n\n");
-			}
-			break;
-		
-			case 7:
+		 printf("Nota 2: ");
+		 scanf("%f", &n2);
+		 //processamento
+		 media = (n1*n2)/2;
 				
+	if(n1,n2>= 0,0 && n1,n2<=10.0){
+		//saída1
+		printf("\nSua media é: %.2f\n\n", media);
+		
+	}else{
+		//saída2
+		printf("\nA nota não possui um valor válido\n\n");
+		}
 			break;
 		
-			case 8:
-				
-			break;
+	case 7:
+		//Números que se forem digitados, informarem ao usuário que não está disponivel
+		printf("\nNenhuma ação para esse número, digite novamente");	
+		break;
 		
-			case 9:
-				
-			break;
+	case 8:
+		//Números que se forem digitados, informarem ao usuário que não está disponivel
+		printf("\nNenhuma ação para esse número, digite novamente");	
+		break;
+		
+	case 9:
+		//Números que se forem digitados, informarem ao usuário que não está disponivel
+		printf("\nNenhuma ação para esse número, digite novamente");	
+		break;
 			
-			case 10:
-			char nome[61];
-			int mtc;
-			
-			printf("Digite seu nome: ");
-			scanf("%s", &nome);
-			
-			printf("Digite aqui sua matricula: ");
-			scanf("%d", &mtc);
-			
-			printf("Ola %s sua matricula em Hexadecimal é: %2X", nome, mtc);
-			break;
+	case 10:
+	char nome[61];
+	int mtc;
+		//entrada
+		printf("Digite seu nome: ");
+		scanf("%s", &nome);
+		//processamento
+		printf("Digite aqui sua matrícula: ");
+		scanf("%d", &mtc);
+		//saída
+		printf("Ola %s sua matrícula em Hexadecimal é: %2X", nome, mtc);
+		break;
 	}
 	
-	}while (i != 0 && i<=9);
+	}while (i != 0 && i<=10);
 	
 	getch();
 	
