@@ -161,19 +161,23 @@ int main(){
 	break;
 		
 	case 8:
-		int num;
+		int i, num, resultado;
 		
 			printf("Digite aqui o numero: ");
 			scanf("%d", &num);	
 		
-		if(num<=0){
-			printf("Numero invalido");
-	
-		}else if(num%2 == 0){
-			printf("%d não é primo", num);
+		for (i = 2; i <= num /2; i++){
+		
+		if(num % i == 0){
+
+			resultado++;
+		}
+		}
+		if(resultado == 0){
+			printf("%d é primo", num);
 			
 		}else{
-			printf("%d é primo", num);
+			printf("%d não é primo", num);
 			}
 		
 		break;
