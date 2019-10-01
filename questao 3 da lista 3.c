@@ -14,13 +14,18 @@ int main(void){
 		
 	for(i=0; txt1[i] != '\0' && i<sizeof(txt1); i++){
 		if(txt1[i] != txt2[i]){
-			printf("Os textos sao diferentes");
 			contador++;
 			break;
 		}
 	}
-	if (contador=0){
+	if(txt1[i] != txt2[i]){
+		contador++;
+	}
+	
+	if (contador==0){
 		printf("Os textos sao iguais");
 	}
+	else{
+		printf("Os textos sao diferentes");
+	}
 }
-
